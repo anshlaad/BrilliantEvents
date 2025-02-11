@@ -48,6 +48,31 @@ footer {
     width: 100%;
 }
 
+/* Responsive Styles */
+
+/* Mobile View (Up to 600px) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Tablet View (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
    
 
 /* Home Page Styles */
@@ -109,6 +134,30 @@ footer {
 
 .event-card .cta-button:hover {
     background-color: #e65a50;
+}
+/* Responsive Styles */
+
+/* Mobile View (Up to 600px) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Tablet View (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
 }
 
 /* Event Packages Page Styles */
@@ -253,6 +302,31 @@ footer {
         max-width: 300px;
     }
 }
+/* Responsive Styles */
+
+/* Mobile View (Up to 600px) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Tablet View (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
 
 /* Gallery Page Styles */
 #gallery {
@@ -346,6 +420,31 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
+/* Responsive Styles */
+
+/* Mobile View (Up to 600px) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Tablet View (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
 /* Testimonials Page Styles */
 #testimonials {
     padding: 80px 20px;
@@ -450,6 +549,31 @@ footer {
         max-width: 300px;
     }
 }
+/* Responsive Styles */
+
+/* Mobile View (Up to 600px) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Tablet View (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+}
+
 /* Contact Page Styles */
 #contact {
     padding: 80px 20px;
@@ -581,6 +705,30 @@ footer {
 
     .contact-form, .contact-info, .contact-map {
         width: 100%;
+    }
+}
+/* Responsive Styles */
+
+/* Mobile View (Up to 600px) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Tablet View (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
     }
 }
 
@@ -805,5 +953,29 @@ footer {
 
     .team-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+/* Responsive Styles */
+
+/* Mobile View (Up to 600px) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Tablet View (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
     }
 }
