@@ -1,0 +1,809 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #393E46;
+    color: #fff;
+}
+
+header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: ;
+    color: #f8b400;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #1976D2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: #F4E1C1;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+   
+
+/* Home Page Styles */
+#overview {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #222831;
+}
+
+#featured-events {
+    padding: 50px 20px;
+    background-color: #9E6A38;
+    text-align: center;
+}
+
+.event-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.event-card .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.event-card .cta-button:hover {
+    background-color: #e65a50;
+}
+
+/* Event Packages Page Styles */
+   
+#packages {
+    padding: 80px 20px;
+    background-color: #C19A6B;
+    text-align: center;
+}
+
+#packages h1 {
+    font-family : 'Poppins',sans-serif;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #2C3E50;
+    text-transform: uppercase;
+    animation: float 3s infinite ease-in-out;
+    letter-spacing:2px;
+    font-weight:bold;
+    
+}
+
+/* Floating Animation for Heading */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Flip Animation for Package Cards */
+@keyframes flip {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+.package-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.package-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    cursor: pointer;
+}
+
+.package-card:hover {
+    transform: rotateY(180deg);
+
+}
+
+.package-back .cta-button:hover {
+    background: #e65a50;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+}
+
+.package-front, .package-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.package-front {
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    color: #fff;
+}
+
+.package-front h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.package-front .price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.package-front ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.package-front ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.package-back {
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.package-back p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.package-back .cta-button {
+    padding: 10px 20px;
+    background: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.package-back .cta-button:hover {
+    background: #e65a50;
+}
+
+@media (max-width: 768px) {
+    .package-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Gallery Page Styles */
+#gallery {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    animation: float 3s infinite ease-in-out;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.gallery-item {
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    cursor: pointer;
+}
+
+.gallery-item-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.gallery-item:hover .gallery-item-inner {
+    transform: rotateY(180deg);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 111, 97, 0.9), rgba(255, 204, 0, 0.9));
+    color: #fff;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+}
+
+.caption h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.caption p {
+    font-size: 1rem;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+/* Testimonials Page Styles */
+#testimonials {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    animation: float 3s infinite ease-in-out;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    cursor: pointer;
+}
+
+.testimonial-card:hover {
+    transform: rotateY(180deg);
+}
+
+.testimonial-front, .testimonial-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-front {
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    color: #fff;
+}
+
+.testimonial-front img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-front h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-front .role {
+    font-size: 1rem;
+    color: #f4f4f4;
+}
+
+.testimonial-back {
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.testimonial-back p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-back .rating {
+    font-size: 1.5rem;
+    color: #ffcc00;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/* Contact Page Styles */
+#contact {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    animation: float 3s infinite ease-in-out;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form, .contact-info, .contact-map {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover, .contact-info:hover, .contact-map:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h3, .contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff6f61, #ffcc00);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #e65a50, #ffbb00);
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #e65a50;
+}
+
+.contact-map {
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-info, .contact-map {
+        width: 100%;
+    }
+}
+
+/* About Us Page Styles */
+#about {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    animation: float 3s infinite ease-in-out;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ceo-section, .team-section {
+    margin-bottom: 60px;
+}
+
+.ceo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ceo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.ceo-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.ceo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ceo-image .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #ff6f61;
+    border-radius: 50%;
+    animation: rotateFrame 8s linear infinite; /* 8 seconds for a full rotation */
+}
+
+.ceo-info {
+    text-align: left;
+}
+
+.ceo-info h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ceo-info .role {
+    font-size: 1.2rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.ceo-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease; /* 0.3s frame rate */
+}
+
+.social-media a:hover {
+    color: #e65a50;
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.team-section h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.member-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-image .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #ff6f61;
+    border-radius: 50%;
+    animation: rotateFrame 8s linear infinite; /* 8 seconds for a full rotation */
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.member-info .role {
+    font-size: 1rem;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.member-info p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes rotateFrame {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.social-media {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.social-media a {
+    color: #ff6f61; /* Icon color */
+    text-decoration: none;
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.social-media a:hover {
+    color: #e65a50; /* Icon color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+@media (max-width: 768px) {
+    .ceo-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
