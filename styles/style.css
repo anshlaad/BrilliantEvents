@@ -28,7 +28,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     list-style: none;
     padding: 0;
     flex-wrap: wrap;
@@ -40,6 +40,8 @@ nav ul li {
     flex-direction: coloumn;
     align-items: center;
     text-align: center;
+    gap: 5px;
+    width: 80px;
 }
 
 nav ul li a {
@@ -55,6 +57,7 @@ nav ul li img {
 nav ul li span {
     font-size: 14px;
     color: white;
+    display: block;
     margin-top: 5px;
 }
 @media(max-width: 768px){
