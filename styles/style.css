@@ -79,12 +79,12 @@ footer {
 #overview {
     padding: 50px 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: #3C3C3C;
 }
 
 #featured-events {
     padding: 50px 20px;
-    background-color: #9E6A38;
+    background-image : url('https://raw.githubusercontent.com/anshlaad/BrilliantEvents/main/assests/images/bg.png');
     text-align: center;
 }
 
