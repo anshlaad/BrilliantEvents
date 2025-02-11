@@ -1016,6 +1016,11 @@ footer {
     transform: scale(1.2); /* Slightly enlarge on hover */
 }
 
+.social-icon {
+    width: 40px;
+    height: auto;
+}
+
 @media (max-width: 768px) {
     .ceo-card {
         flex-direction: column;
