@@ -95,6 +95,29 @@ footer {
     background-image : url('https://raw.githubusercontent.com/anshlaad/BrilliantEvents/main/assests/images/bg.png');
     text-align: center;
 }
+/* Mobile Devices (Up to 600px) */
+@media (max-width: 600px) {
+    img {
+        width: 100%;  /* Full width */
+        height: auto;
+    }
+}
+
+/* Tablet Devices (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    img {
+        width: 80%; /* Adjust width */
+        height: auto;
+    }
+}
+
+/* Desktop Devices (1025px and above) */
+@media (min-width: 1025px) {
+    img {
+        width: 60%; /* Smaller width */
+        height: auto;
+    }
+}
 
 .event-card {
     background-color: #333;
