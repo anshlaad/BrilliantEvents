@@ -30,12 +30,12 @@ header {
 
 nav ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
     list-style: none;
     padding: 0;
+    flex-wrap: nowrap;
     margin: 0;
 }
 
@@ -44,7 +44,6 @@ nav ul li {
     flex-direction: coloumn;
     align-items: center;
     text-align: center;
-    margin: 0 15px;
 }
 
 nav ul li a {
@@ -64,9 +63,10 @@ nav ul li span {
 }
 @media(max-width: 768px){
     nav ul {
-        flex-wrap: nowrap;
+        
         overflow-x: auto;
         white-space: nowrap;
+        padding: 10px;
     }
 }
 
