@@ -1,4 +1,8 @@
+
 /* General Styles */
+/* Make all images responsive */
+
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -21,14 +25,21 @@ header {
 
 
 nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     list-style: none;
     padding: 0;
+    flex-wrap: wrap;
     margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex;
+    flex-direction: coloumn;
+    align-items: center;
+    text-align: center;
 }
 
 nav ul li a {
@@ -37,6 +48,33 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav ul li img {
+    width: 50px;
+    height: 50px;
+}
+nav ul li span {
+    font-size: 14px;
+    color: white;
+    margin-top: 5px;
+}
+@media(max-width: 768px){
+    nav ul {
+        
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px;
+    }
+    nav ul li {
+        flex: 1;
+    }
+    nav ul li img {
+        width: 35px;
+        height: 35px;  
+    }
+    nav ul li span {
+        font-size: 12px;
+    }
+}
 
 footer {
     background-color: #F4E1C1;
@@ -47,47 +85,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-/* Responsive Styles */
-
-/* Mobile View (Up to 600px) */
-@media screen and (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    footer {
-        position: relative;
-    }
-}
-
-/* Tablet View (601px to 1024px) */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
-}
-
-   
-
-/* Home Page Styles */
-#overview {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #222831;
-}
-
-#featured-events {
-    padding: 50px 20px;
-    background-color: #9E6A38;
-    text-align: center;
-}
-
-
 
 /* Mobile Devices (Up to 600px) */
 @media (max-width: 600px) {
@@ -105,6 +102,52 @@ footer {
     }
 }
 
+/* Desktop Devices (1025px and above) */
+@media (min-width: 1025px) {
+    img {
+        width: 60%; /* Smaller width */
+        height: auto;
+    }
+}
+
+
+   
+
+/* Home Page Styles */
+#overview {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #3C3C3C;
+}
+
+#featured-events {
+    padding: 50px 20px;
+    background-image : url('https://raw.githubusercontent.com/anshlaad/BrilliantEvents/main/assests/images/bg.png');
+    text-align: center;
+}
+/* Mobile Devices (Up to 600px) */
+@media (max-width: 600px) {
+    img {
+        width: 100%;  /* Full width */
+        height: auto;
+    }
+}
+
+/* Tablet Devices (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    img {
+        width: 80%; /* Adjust width */
+        height: auto;
+    }
+}
+
+/* Desktop Devices (1025px and above) */
+@media (min-width: 1025px) {
+    img {
+        width: 60%; /* Smaller width */
+        height: auto;
+    }
+}
 
 .event-card {
     background-color: #333;
@@ -152,7 +195,8 @@ footer {
 
 .event-card .cta-button:hover {
     background-color: #e65a50;
-}/* Responsive Styles */
+}
+/* Responsive Styles */
 
 /* Mobile View (Up to 600px) */
 @media screen and (max-width: 600px) {
