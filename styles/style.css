@@ -85,6 +85,38 @@ nav ul li span {
         margin-top: 5px;
     }
 }
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.cookie-banner button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.cookie-banner button:hover {
+    background: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
 
 footer {
     background-color: #F4E1C1;
