@@ -857,6 +857,9 @@ footer {
     footer {
         position: relative;
     }
+    .contact-map {
+     padding-bottom: 75%;
+}
 }
 
 /* Tablet View (601px to 1024px) */
@@ -864,6 +867,9 @@ footer {
     body {
         font-size: 18px;
     }
+    .contact-map {
+     padding-bottom: 65%;
+}
 }
 
 /* About Us Page Styles */
