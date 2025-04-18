@@ -285,81 +285,60 @@ footer {
 
 /* Event Packages Page Styles */
    
-#packages {
-    padding: 80px 20px;
-    background-color: #C19A6B;
-    text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-#packages h1 {
-    font-family : 'Poppins',sans-serif;
-    font-size: 3rem;
-    margin-bottom: 40px;
-    color: #2C3E50;
-
-    letter-spacing:2px;
-    font-weight:bold;
-    
-}
-
-
-.package-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+.package-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
 }
 
 .package-card {
-    width: 300px;
-    height: 400px;
-    perspective: 1000px;
-    position: relative;
-   
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-
-
-
-
-.package-front {
-    background: linear-gradient(135deg, #ff6f61, #ffcc00);
-    color: #fff;
+.package-card:hover {
+  transform: translateY(-5px);
 }
 
-.package-front h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.package-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.package-front .price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+.price {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 20px;
 }
 
-.package-front ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.package-front ul li {
-    margin: 10px 0;
-    font-size: 1rem;
+button:hover {
+  background-color: #0056b3;
 }
-
- .cta-button {
-    padding: 10px 20px;
-    background: #ff6f61;
-    color: Red;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 700;
-    
-}
-
-.
 
 @media (max-width: 768px) {
     .package-card {
