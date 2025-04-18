@@ -251,7 +251,7 @@ footer {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ff6f61;
-    color: Red;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
    
@@ -296,7 +296,8 @@ footer {
     font-size: 3rem;
     margin-bottom: 40px;
     color: #2C3E50;
-
+    text-transform: uppercase;
+    
     letter-spacing:2px;
     font-weight:bold;
     
@@ -325,10 +326,19 @@ footer {
     height: 400px;
     perspective: 1000px;
     position: relative;
-   
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    cursor: pointer;
 }
 
 
+
+.package-front .cta-button:hover {
+    background: #e65a50;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+}
 
 
 
@@ -359,17 +369,7 @@ footer {
     font-size: 1rem;
 }
 
- .cta-button {
-    padding: 10px 20px;
-    background: #ff6f61;
-    color: Red;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 700;
-    
-}
 
-.
 
 @media (max-width: 768px) {
     .package-card {
