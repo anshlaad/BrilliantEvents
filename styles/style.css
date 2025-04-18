@@ -227,7 +227,7 @@ footer {
     display: inline-block;
     width: 30%;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 .event-card img {
@@ -254,7 +254,7 @@ footer {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+   
 }
 
 
