@@ -1100,3 +1100,37 @@ footer {
         font-size: 18px;
     }
 }
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.mobile-nav li {
+  text-align: center;
+  flex: 1 1 30%; /* responsive grid-like layout */
+}
+
+.mobile-nav img {
+  display: block;
+  margin: 0 auto 5px;
+  width: 50px;
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 768px) {
+  .mobile-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-nav li {
+    flex: none;
+    margin-bottom: 15px;
+  }
+}
