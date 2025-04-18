@@ -644,8 +644,8 @@ footer {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: black;
-  color: white;
+  background-color: White;
+  color: Black;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
