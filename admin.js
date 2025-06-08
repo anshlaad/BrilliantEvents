@@ -19,27 +19,35 @@ function checkLogin() {
 
 // IMAGE UPLOAD
 document.getElementById("uploadForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
+  e.preventDefault(); // Stop default form submission
 
   const file = document.getElementById("image").files[0];
   const category = document.getElementById("category").value;
 
+  if (!file || !category) {
+    alert("Please select a file and a category.");
+    return;
+  }
+
   const formData = new FormData();
   formData.append("file", file);
-  formData.append("upload_preset", uploadPreset);
+  formData.append("upload_preset", "brilliantevents123");
   formData.append("folder", category);
 
-  const cloudRes = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+  const cloudRes = await fetch("https://api.cloudinary.com/v1_1/daz8xina/image/upload", {
     method: "POST",
     body: formData,
   });
 
   const cloudData = await cloudRes.json();
-  const imageUrl = cloudData.secure_url;
-  if (!imageUrl) {
-    alert("Upload failed. Check Cloudinary setup.");
+
+  if (!cloudData.secure_url) {
+    alert("Upload failed!");
     return;
   }
+
+  document.getElementById("status").textContent = "✅ Uploaded!";
+});
 
   // Update GitHub JSON
   const jsonFile = `${jsonFolderPath}/${category}.json`;
