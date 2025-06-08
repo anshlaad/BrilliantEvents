@@ -5,6 +5,19 @@
   <title>Brilliant Events - Gallery</title>
   <link rel="stylesheet" href="styles/style.css"/>
 </head>
+  <script>
+  const pw = sessionStorage.getItem("admin_pw");
+  if (pw === "brilliantevents123") {
+    document.getElementById("adminTab").style.display = "inline-block";
+  } else {
+    const input = prompt("Enter Admin Password (optional):");
+    if (input === "brilliantevents123") {
+      sessionStorage.setItem("admin_pw", input);
+      document.getElementById("adminTab").style.display = "inline-block";
+    }
+  }
+</script>
+
 <body>
 
   <h1>Brilliant Events - Decor Gallery</h1>
