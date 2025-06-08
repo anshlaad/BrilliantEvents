@@ -209,4 +209,5 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
 
     // Load default category on page load
     loadGallery('RingDecor');
-  </script>
+  
+
