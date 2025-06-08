@@ -897,7 +897,7 @@ button:hover {
 }
 
 .ceo-info {
-    text-align: left;
+    text-align: centre;
 }
 
 .ceo-info h3 {
@@ -931,10 +931,6 @@ button:hover {
     transition: transform 0.3s ease, color 0.3s ease; /* 0.3s frame rate */
 }
 
-.social-media a:hover {
-    color: #e65a50;
-    transform: scale(1.2); /* Scale up on hover */
-}
 
 .team-section h3 {
     font-size: 2rem;
