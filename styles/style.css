@@ -492,6 +492,35 @@ footer {
 .caption p {
     font-size: 1rem;
 }
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.album {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.album:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.image-grid img {
+  max-width: 200px;
+  border-radius: 10px;
+}
 
 @keyframes float {
     0%, 100% {
