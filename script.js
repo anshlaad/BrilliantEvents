@@ -60,6 +60,10 @@ const imageData = {
   ],
 };
 
+function goBackToGallery() {
+  window.location.href = "gallery.html";
+}
+
 function openAlbum(category) {
   document.querySelector(".gallery").classList.add("hidden");
   document.getElementById("album-viewer").classList.remove("hidden");
