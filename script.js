@@ -22,18 +22,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 const imageData = {
-  birthday: [
+  RingDecor: [
     "images/birthday1.jpg",
     "images/birthday2.jpg"
   ],
-  wedding: [
+  weddingEntris: [
     "images/wedding1.jpg",
     "images/wedding2.jpg"
   ],
-  theme: [
+  ThemeBirthdayDecor: [
     "images/theme1.jpg",
     "images/theme2.jpg"
-  ]
+  ],
+  AnniversaryDecor: [
+    "images/wedding1.jpg",
+    "images/wedding2.jpg"
+  ],
+  RoomDecor: [
+    "images/wedding1.jpg",
+    "images/wedding2.jpg"
+  ],
+  RetirementDecor: [
+    "images/wedding1.jpg",
+    "images/wedding2.jpg"
+  ],
+  WelcomeDecor: [
+    "images/wedding1.jpg",
+    "images/wedding2.jpg"
+  ],
+  BabyShowerDecor: [
+    "images/wedding1.jpg",
+    "images/wedding2.jpg"
+  ],
+  terraceDecor: [
+    "images/wedding1.jpg",
+    "images/wedding2.jpg"
+  ],
 };
 
 function openAlbum(category) {
