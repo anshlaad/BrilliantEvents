@@ -1,37 +1,40 @@
-<section id="gallery">
-    <h2>Our Gallery</h2>
-    <div class="gallery-grid">
-   <head><link rel="stylesheet" href="styles/style.css">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brilliant Events - Gallery</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
 
-   </head>    
- <div class="gallery-item">
-            <div class="gallery-item-inner">
-                <img src="https://raw.githubusercontent.com/anshlaad/BrilliantEvents/main/assests/images/balloon.png" alt="Balloon" width = "300" height ="300">
-                <div class="caption">
-                    <h3>Balloon Decor</h3>
-                    <p>Beautiful setup for your celebration</p>
-                </div>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <div class="gallery-item-inner">
-                <img src="https://raw.githubusercontent.com/anshlaad/BrilliantEvents/main/assests/images/wed.png" alt="photography" width = "300" height ="500">
-                <div class="caption">
-                    <h3>Photography</h3>
-                    <p>Capturing the beautiful Moments</p>
-                </div>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <div class="gallery-item-inner">
-                <img src="https://raw.githubusercontent.com/anshlaad/BrilliantEvents/main/assests/images/flower.png" alt="Flower" width = "600" height ="400">
-                <div class="caption">
-                    <h3>Flower & Stage Decor</h3>
-                    <p>An elegant decor.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Add more gallery items as needed -->
+  <h1>Brilliant Events - Decor Gallery</h1>
+
+  <!-- Album Categories Section -->
+  <section class="gallery">
+    <h2>Choose a Decor Category</h2>
+    <div class="album-grid">
+      <div class="album" onclick="openAlbum('birthday')">
+        <img src="images/birthday.jpg" alt="Birthday Decor">
+        <p>Birthday Decor</p>
+      </div>
+      <div class="album" onclick="openAlbum('wedding')">
+        <img src="images/wedding.jpg" alt="Wedding Decor">
+        <p>Wedding Decor</p>
+      </div>
+      <div class="album" onclick="openAlbum('theme')">
+        <img src="images/theme.jpg" alt="Theme Decor">
+        <p>Theme Decor</p>
+      </div>
     </div>
-</section>
+  </section>
+
+  <!-- Album Image Viewer Section -->
+  <section id="album-viewer" class="hidden">
+    <button onclick="goBack()">← Back to Albums</button>
+    <h2 id="album-title"></h2>
+    <div class="image-grid" id="image-list"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
