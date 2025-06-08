@@ -6,42 +6,33 @@
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
+  <!-- LOGIN BOX -->
   <div class="admin-container" id="loginBox">
     <h2>Admin Login</h2>
     <input type="password" id="adminPass" placeholder="Enter Admin Password" />
     <button onclick="checkLogin()">Login</button>
   </div>
 
+  <!-- UPLOAD BOX (Initially Hidden) -->
   <div class="admin-container hidden" id="uploadBox">
     <h2>Upload Image</h2>
     <select id="category">
-        <option value="RingDecor_upload">🎂 Ring Baloon Decor</option>
-        <option value="weddingEntris_upload">💍 Wedding Entries</option>
-        <option value="ThemeBirthdayDecor_upload">🎭 Theme Decor</option>
-        <option value="AnniversaryDecor_upload">🎭 Anniversary Decor</option>
-        <option value="RoomDecor_upload">🎭 Room Decor</option>
-        <option value="RetirementDecor_upload">🎭 Retirement Decor</option>
-        <option value="WelcomeDecor_upload">🎭 Welcome Decor</option>
-        <option value="BabyShowerDecorDecor_upload">🎭 BabyShower Decor</option>
-        <option value="terraceDecor_upload">🌃 Terrace Decor</option>
+      <option value="RingDecor_upload">🎂 Ring Baloon Decor</option>
+      <option value="weddingEntris_upload">💍 Wedding Entries</option>
+      <option value="ThemeBirthdayDecor_upload">🎭 Theme Decor</option>
+      <option value="AnniversaryDecor_upload">🎉 Anniversary Decor</option>
+      <option value="RoomDecor_upload">🛏 Room Decor</option>
+      <option value="RetirementDecor_upload">🏆 Retirement Decor</option>
+      <option value="WelcomeDecor_upload">🙌 Welcome Decor</option>
+      <option value="BabyShowerDecor_upload">👶 Baby Shower Decor</option>
+      <option value="terraceDecor_upload">🌃 Terrace Decor</option>
     </select>
-        <input type="file" id="fileInput" />
+    <input type="file" id="fileInput" />
     <button onclick="uploadImage()">Upload</button>
     <p id="status"></p>
   </div>
-  <body>
-  <div id="login-box">
-    <input type="password" id="admin-password" placeholder="Enter admin password" />
-    <button onclick="checkLogin()">Login</button>
-  </div>
 
-  <div id="upload-box" style="display:none;">
-    <!-- Upload form here -->
-  </div>
-
-  <script src="admin.js"></script>
-</body>
-
+  <!-- JS Link -->
   <script src="admin.js"></script>
 </body>
 </html>
