@@ -1,4 +1,4 @@
-const cloudName = "daz8xina";
+const cloudName = "dasz8xina";
 const uploadPreset = "brilliantevents123";
 const githubToken = "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";
 const githubUsername = "anshlaad";
