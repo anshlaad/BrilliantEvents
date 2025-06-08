@@ -59,9 +59,6 @@ const imageData = {
     "images/wedding2.jpg"
   ],
 };
-function goBackToGallery() {
-  window.location.href = "gallery.html";
-}
 
 function openAlbum(category) {
   document.querySelector(".gallery").classList.add("hidden");
