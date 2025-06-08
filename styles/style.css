@@ -931,6 +931,13 @@ button:hover {
     transition: transform 0.3s ease, color 0.3s ease; /* 0.3s frame rate */
 }
 
+.socual-icon {
+    width: 50px;
+    height: 50px;
+    onject-fit: contain;
+    border-radius:10px;
+    transition: scale(1.1);
+}
 
 .team-section h3 {
     font-size: 2rem;
@@ -1022,27 +1029,6 @@ button:hover {
     }
 }
 
-.social-media {
-    display: flex;
-    gap: 15px; /* Space between icons */
-}
-
-.social-media a {
-    color: #ff6f61; /* Icon color */
-    text-decoration: none;
-    font-size: 1.5rem; /* Icon size */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-}
-
-.social-media a:hover {
-    color: #e65a50; /* Icon color on hover */
-    transform: scale(1.2); /* Slightly enlarge on hover */
-}
-
-.social-icon {
-    width: 100px;
-    height: auto;
-}
 
 @media (max-width: 768px) {
     .ceo-card {
