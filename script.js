@@ -76,6 +76,41 @@ function openAlbum(category) {
 }
 
 
+const cloudName = "dasz8xina"; 
+
+async function uploadImage() {
+  const fileInput = document.getElementById("imageInput");
+  const category = document.getElementById("categorySelect").value;
+  const status = document.getElementById("statusMessage");
+
+  if (!fileInput.files.length || !category) {
+    status.innerText = "❗ Please select category and image.";
+    return;
+  }
+
+  const file = fileInput.files[0];
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("upload_preset", category); // Folder name = preset
+
+  status.innerText = "⏳ Uploading...";
+
+  try {
+    const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/upload`, {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.secure_url) {
+      status.innerText = "✅ Upload successful!";
+    } else {
+      throw new Error(data.error?.message || "Unknown error");
+    }
+  } catch (err) {
+    status.innerText = "❌ Error: " + err.message;
+  }
+}
 
 
 
