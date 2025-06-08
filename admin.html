@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Image Upload - Brilliant Events</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #f39c12;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+    select, input[type="file"], button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background-color: #f39c12;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .status {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin Image Upload</h1>
+  <div class="container">
+    <label>Select Category:</label>
+    <select id="category">
+      <option value="birthday_upload">Birthday</option>
+      <option value="wedding_upload">Wedding</option>
+      <option value="baby-shower_upload">Baby Shower</option>
+      <option value="theme-decor_upload">Theme Decor</option>
+    </select>
+
+    <input type="file" id="imageUpload" accept="image/*" />
+    <button onclick="uploadImage()">Upload Image</button>
+
+    <div class="status" id="status"></div>
+  </div>
+
+  
+</body>
+</html>
