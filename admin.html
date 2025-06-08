@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Panel - BRILLIANT EVENTS</title>
+  <meta charset="UTF-8" />
+  <title>Admin Upload | Brilliant Events</title>
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <h1>Upload Images to Cloudinary</h1>
-  <button class="upload-btn" onclick="openWidget()">Upload Image</button>
+  <div class="admin-container" id="loginBox">
+    <h2>Admin Login</h2>
+    <input type="password" id="adminPass" placeholder="Enter Admin Password" />
+    <button onclick="checkLogin()">Login</button>
+  </div>
 
-  
-  <div class="admin-container">
-    <h1>Brilliant Events - Admin Upload Panel</h1>
-
-      <select id="categorySelect">
-        <option value="">Select Category</option>
+  <div class="admin-container hidden" id="uploadBox">
+    <h2>Upload Image</h2>
+    <select id="category">
         <option value="RingDecor_upload">🎂 Ring Baloon Decor</option>
         <option value="weddingEntris_upload">💍 Wedding Entries</option>
         <option value="ThemeBirthdayDecor_upload">🎭 Theme Decor</option>
@@ -25,13 +24,11 @@
         <option value="WelcomeDecor_upload">🎭 Welcome Decor</option>
         <option value="BabyShowerDecorDecor_upload">🎭 BabyShower Decor</option>
         <option value="terraceDecor_upload">🌃 Terrace Decor</option>
-      </select><br>
-<input type="file" id="imageInput" accept="image/*" />
+    </select>
+        <input type="file" id="fileInput" />
     <button onclick="uploadImage()">Upload</button>
-    
-    <p id="statusMessage"></p>
+    <p id="status"></p>
   </div>
-  <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
-  <script src="script.js"></script>
+  <script src="admin.js"></script>
 </body>
 </html>
