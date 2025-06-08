@@ -21,3 +21,37 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("You have rejected cookies. Some features may not work properly.");
     });
 });
+const imageData = {
+  birthday: [
+    "images/birthday1.jpg",
+    "images/birthday2.jpg"
+  ],
+  wedding: [
+    "images/wedding1.jpg",
+    "images/wedding2.jpg"
+  ],
+  theme: [
+    "images/theme1.jpg",
+    "images/theme2.jpg"
+  ]
+};
+
+function openAlbum(category) {
+  document.querySelector(".gallery").classList.add("hidden");
+  document.getElementById("album-viewer").classList.remove("hidden");
+  document.getElementById("album-title").innerText = category.charAt(0).toUpperCase() + category.slice(1) + " Decor";
+
+  const imageList = document.getElementById("image-list");
+  imageList.innerHTML = "";
+
+  imageData[category].forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    imageList.appendChild(img);
+  });
+}
+
+function goBack() {
+  document.querySelector(".gallery").classList.remove("hidden");
+  document.getElementById("album-viewer").classList.add("hidden");
+}
