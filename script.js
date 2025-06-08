@@ -114,7 +114,7 @@ async function uploadImage() {
 
 function openWidget() {
       cloudinary.openUploadWidget({
-        cloudName: 'daz8xina',
+        cloudName: 'dasz8xina',
         uploadPreset: 'RingDecor_upload',  // <-- change this if you want other folders
         sources: ['local', 'camera', 'url'],
         folder: 'terraceDecor', // for clarity, although preset should handle this
