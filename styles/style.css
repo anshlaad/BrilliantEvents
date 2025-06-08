@@ -1206,3 +1206,39 @@ button:hover {
 }
 
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.admin-container {
+  max-width: 500px;
+  margin: auto;
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+select, input[type="file"], button {
+  margin: 1rem 0;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e73370;
+}
+
