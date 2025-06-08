@@ -1,65 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Image Upload - Brilliant Events</title>
-  <style>
-    body {
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #f39c12;
-    }
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    }
-    select, input[type="file"], button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 15px;
-      border-radius: 5px;
-      border: none;
-    }
-    button {
-      background-color: #f39c12;
-      color: #fff;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .status {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 1rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Upload Decor Images</title>
+  <link rel="stylesheet" href="css/admin.css" />
+  <script src="admin.js" defer></script>
 </head>
 <body>
-  <h1>Admin Image Upload</h1>
   <div class="container">
-    <label>Select Category:</label>
-    <select id="category">
-      <option value="birthday_upload">Birthday</option>
-      <option value="wedding_upload">Wedding</option>
-      <option value="baby-shower_upload">Baby Shower</option>
-      <option value="theme-decor_upload">Theme Decor</option>
-    </select>
+    <h2>Brilliant Events - Admin Upload Panel</h2>
 
-    <input type="file" id="imageUpload" accept="image/*" />
-    <button onclick="uploadImage()">Upload Image</button>
+    <form id="uploadForm">
+      <input type="file" id="imageUpload" required><br>
 
-    <div class="status" id="status"></div>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="RingDecor_upload">🎂 Ring Baloon Decor</option>
+        <option value="weddingEntris_upload">💍 Wedding Entries</option>
+        <option value="ThemeBirthdayDecor_upload">🎭 Theme Decor</option>
+        <option value="AnniversaryDecor_upload">🎭 Anniversary Decor</option>
+        <option value="RoomDecor_upload">🎭 Room Decor</option>
+        <option value="RetirementDecor_upload">🎭 Retirement Decor</option>
+        <option value="WelcomeDecor_upload">🎭 Welcome Decor</option>
+        <option value="BabyShowerDecorDecor_upload">🎭 BabyShower Decor</option>
+        <option value="terraceDecor_upload">🌃 Terrace Decor</option>
+      </select><br>
+
+      <button type="submit">Upload</button>
+    </form>
+
+    <p id="status"></p>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
