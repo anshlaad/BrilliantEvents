@@ -128,12 +128,17 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
   }
 });
 
-<script>
-  // Prompt for admin password
-  const pw = prompt("Enter admin password (or leave blank to continue):");
+  const pw = sessionStorage.getItem("admin_pw");
   if (pw === "brilliantevents123") {
-    document.getElementById("adminTab").style.display = "inline";
+    document.getElementById("adminTab").style.display = "inline-block";
+  } else {
+    const input = prompt("Enter Admin Password (optional):");
+    if (input === "brilliantevents123") {
+      sessionStorage.setItem("admin_pw", input);
+      document.getElementById("adminTab").style.display = "inline-block";
+    }
   }
-</script>
+
+
 
 
