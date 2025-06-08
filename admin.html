@@ -2,18 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin Panel - Upload Decor Images</title>
   <link rel="stylesheet" href="styles/style.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="container">
+  <div class="admin-container">
     <h2>Brilliant Events - Admin Upload Panel</h2>
 
-    <form id="uploadForm">
-      <input type="file" id="imageUpload" required><br>
-
-      <select id="category" required>
+      <select id="categorySelect">
         <option value="">Select Category</option>
         <option value="RingDecor_upload">🎂 Ring Baloon Decor</option>
         <option value="weddingEntris_upload">💍 Wedding Entries</option>
@@ -25,11 +23,12 @@
         <option value="BabyShowerDecorDecor_upload">🎭 BabyShower Decor</option>
         <option value="terraceDecor_upload">🌃 Terrace Decor</option>
       </select><br>
-
-      <button type="submit">Upload</button>
-    </form>
-
-    <p id="status"></p>
+<input type="file" id="imageInput" accept="image/*" />
+    <button onclick="uploadImage()">Upload</button>
+    
+    <p id="statusMessage"></p>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
