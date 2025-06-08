@@ -74,7 +74,7 @@ function openAlbum(category) {
     imageList.appendChild(img);
   });
 }
-    const cloudName = "dasz8xina"; // 🔁 Replace with your Cloudinary Cloud Name
+    const cloudName = "dasz8xina"; 
 
     function uploadImage() {
       const fileInput = document.getElementById("imageUpload");
@@ -116,3 +116,38 @@ function goBack() {
   document.querySelector(".gallery").classList.remove("hidden");
   document.getElementById("album-viewer").classList.add("hidden");
 }
+const cloudName = "dasz8xina"; 
+    const galleryDiv = document.getElementById("gallery");
+    const noImagesMsg = document.getElementById("noImages");
+
+    function loadGallery(folder) {
+      galleryDiv.innerHTML = "Loading...";
+      noImagesMsg.style.display = "none";
+
+      fetch(`https://res.cloudinary.com/${cloudName}/image/list/${folder}.json`)
+        .then(response => {
+          if (!response.ok) throw new Error("No image list available.");
+          return response.json();
+        })
+        .then(data => {
+          galleryDiv.innerHTML = "";
+          if (data.resources.length === 0) {
+            noImagesMsg.style.display = "block";
+            return;
+          }
+
+          data.resources.forEach(img => {
+            const imgElem = document.createElement("img");
+            imgElem.src = `https://res.cloudinary.com/${cloudName}/image/upload/${img.public_id}.jpg`;
+            galleryDiv.appendChild(imgElem);
+          });
+        })
+        .catch(err => {
+          galleryDiv.innerHTML = "";
+          noImagesMsg.style.display = "block";
+        });
+    }
+
+    // Load default category on page load
+    loadGallery('RingDecor');
+  </script>
