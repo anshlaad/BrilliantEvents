@@ -117,7 +117,7 @@ function openWidget() {
         cloudName: 'dasz8xina',
         uploadPreset: 'RingDecor_upload',  // <-- change this if you want other folders
         sources: ['local', 'camera', 'url'],
-        folder: 'terraceDecor', // for clarity, although preset should handle this
+        folder: 'RingDecor', // for clarity, although preset should handle this
         multiple: false,
         resourceType: 'image'
       }, (error, result) => {
