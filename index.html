@@ -51,6 +51,28 @@
     </div>
             
         </section>
+
+        <section class="gallery">
+  <h2>Our Decor Categories</h2>
+  <div class="album-grid">
+    <div class="album" onclick="openAlbum('birthday')">
+      <img src="assets/birthday-cover.jpg" alt="Birthday Decor">
+      <p>Birthday Decor</p>
+    </div>
+    <div class="album" onclick="openAlbum('wedding')">
+      <img src="assets/wedding-cover.jpg" alt="Wedding Decor">
+      <p>Wedding Decor</p>
+    </div>
+    <!-- Add more categories here -->
+  </div>
+</section>
+
+<section id="image-viewer" style="display:none;">
+  <button onclick="closeAlbum()">Back to Albums</button>
+  <h3 id="album-title"></h3>
+  <div class="image-grid" id="album-images"></div>
+</section>
+
         <!-- Cookie Consent Banner -->
     <div class="cookie-banner" id="cookieBanner">
         <p>This website uses cookies to ensure you get the best experience.By continuing to use this site, you accept our use of cookies.</p>
