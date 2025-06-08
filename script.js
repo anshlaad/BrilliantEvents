@@ -80,53 +80,45 @@ const password = prompt("Enter admin password:");
 if (password !== "brilliantevents123") {
   alert("Unauthorized access.");
   window.location.href = "index.html"; // redirect if wrong
-}
+}  
 
-const cloudName = "dasz8xina"; 
-const uploadPresets = {
-  RingDecor_upload: "RingDecor_upload",
-  weddingEntries_upload: "weddingEntries_upload",
-  ThemeBirthdayDecor_upload: "ThemeBirthdayDecor_upload",
-  terraceDecor_upload: "terraceDecor_upload"
-};
+const cloudName = "dasz8xina"; // change this
+const uploadPresetBase = ""; // leave this blank
 
-document.getElementById("uploadForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
+async function uploadImage() {
+  const fileInput = document.getElementById("imageInput");
+  const category = document.getElementById("categorySelect").value;
+  const status = document.getElementById("statusMessage");
 
-  const file = document.getElementById("imageUpload").files[0];
-  const category = document.getElementById("category").value;
-  const preset = uploadPresets[category];
-
-  if (!file || !preset) {
-    alert("Please select both an image and a category.");
+  if (!fileInput.files.length || !category) {
+    status.innerText = "Please select category and image.";
     return;
   }
 
+  const file = fileInput.files[0];
   const formData = new FormData();
   formData.append("file", file);
-  formData.append("upload_preset", preset);
+  formData.append("upload_preset", category); // same as your unsigned preset name
 
-  document.getElementById("status").innerText = "Uploading...";
+  status.innerText = "Uploading...";
 
   try {
-    const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+    const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/upload`, {
       method: "POST",
       body: formData
     });
 
     const data = await response.json();
-
     if (data.secure_url) {
-      document.getElementById("status").innerText = "✅ Upload successful!";
-      console.log("Image URL:", data.secure_url);
+      status.innerText = "✅ Upload successful!";
     } else {
-      document.getElementById("status").innerText = "❌ Upload failed.";
+      throw new Error(data.error?.message || "Unknown error");
     }
-  } catch (error) {
-    console.error("Error:", error);
-    document.getElementById("status").innerText = "❌ Upload failed.";
+  } catch (err) {
+    status.innerText = "❌ Error: " + err.message;
   }
-});
+}
+
 
   const pw = sessionStorage.getItem("admin_pw");
   if (pw === "brilliantevents123") {
