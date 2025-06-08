@@ -1,46 +1,62 @@
-const CLOUD_NAME = "dasz8xina";
-const UPLOAD_PRESET = "brilliant_preset";
-const ADMIN_PASSWORD = "brilliantevents123";
+const cloudName = "daz8xina";
+const uploadPreset = "brilliantevents123";
+const githubToken = "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";
+const githubUsername = "anshlaad";
+const repoName = "BrilliantEvents";
+const jsonFolderPath = "data";
 
-function checkLogin() {
-  const pass = document.getElementById("adminPass").value;
-  if (pass === ADMIN_PASSWORD) {
-    document.getElementById("loginBox").classList.add("hidden");
-    document.getElementById("uploadBox").classList.remove("hidden");
-  } else {
-    alert("Incorrect password");
-  }
-}
+document.getElementById("uploadForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-function uploadImage() {
-  const file = document.getElementById("fileInput").files[0];
-  const folder = document.getElementById("category").value;
-  const status = document.getElementById("status");
-
-  if (!file) {
-    alert("Please select a file");
-    return;
-  }
+  const file = document.getElementById("image").files[0];
+  const category = document.getElementById("category").value;
+  const folder = category + "Decor";
 
   const formData = new FormData();
   formData.append("file", file);
-  formData.append("upload_preset", UPLOAD_PRESET);
+  formData.append("upload_preset", uploadPreset);
   formData.append("folder", folder);
 
-  status.innerText = "Uploading...";
-
-  fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
+  const cloudRes = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
     method: "POST",
     body: formData,
-  })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      status.innerText = "Upload successful!";
-    })
-    .catch(err => {
-      console.error(err);
-      status.innerText = "Upload failed.";
-    });
-}
+  });
 
+  const cloudData = await cloudRes.json();
+  const imageUrl = cloudData.secure_url;
+
+  // Update GitHub JSON
+  const jsonFile = `${jsonFolderPath}/${category}.json`;
+  const getUrl = `https://api.github.com/repos/${githubUsername}/${repoName}/contents/${jsonFile}`;
+
+  const fileRes = await fetch(getUrl, {
+    headers: { Authorization: `Bearer ${githubToken}` },
+  });
+
+  let sha = "";
+  let content = [];
+  if (fileRes.ok) {
+    const fileData = await fileRes.json();
+    sha = fileData.sha;
+    content = JSON.parse(atob(fileData.content));
+  }
+
+  content.push(imageUrl);
+
+  const updatedContent = btoa(JSON.stringify(content, null, 2));
+
+  await fetch(getUrl, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${githubToken}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      message: `Add new image to ${category}.json`,
+      content: updatedContent,
+      sha,
+    }),
+  });
+
+  alert("Image uploaded and JSON updated successfully!");
+});
