@@ -16,7 +16,8 @@
   <!-- UPLOAD BOX (Initially Hidden) -->
   <div class="admin-container hidden" id="uploadBox">
     <h2>Upload Image</h2>
-    <select id="category">
+    <form id="uploadForm">
+    <select id="category" required>
       <option value="RingDecor_upload">🎂 Ring Baloon Decor</option>
       <option value="weddingEntris_upload">💍 Wedding Entries</option>
       <option value="ThemeBirthdayDecor_upload">🎭 Theme Decor</option>
@@ -27,8 +28,9 @@
       <option value="BabyShowerDecor_upload">👶 Baby Shower Decor</option>
       <option value="terraceDecor_upload">🌃 Terrace Decor</option>
     </select>
-    <input type="file" id="fileInput" />
-    <button onclick="uploadImage()">Upload</button>
+    <input type="file" id="image" required/>
+    <button type="Submit()">Upload</button>
+    </form>
     <p id="status"></p>
   </div>
 
