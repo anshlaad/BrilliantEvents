@@ -5,39 +5,6 @@
   <title>Brilliant Events - Gallery</title>
   <link rel="stylesheet" href="styles/style.css"/>
 </head>
-  <script>
-  const pw = sessionStorage.getItem("admin_pw");
-  if (pw === "brilliantevents123") {
-    document.getElementById("adminTab").style.display = "inline-block";
-  } else {
-    const input = prompt("Enter Admin Password (optional):");
-    if (input === "brilliantevents123") {
-      sessionStorage.setItem("admin_pw", input);
-      document.getElementById("adminTab").style.display = "inline-block";
-    }
-  }
-  const cloudName = "dasz8xina";
-    const folder = "RingDecor"; // ← Make sure this matches upload folder name
-
-    async function loadGallery() {
-      try {
-        const res = await fetch(`https://res.cloudinary.com/${cloudName}/image/list/${folder}.json`);
-        const data = await res.json();
-
-        const container = document.getElementById("gallery");
-        data.resources.forEach(image => {
-          const img = document.createElement("img");
-          img.src = `https://res.cloudinary.com/${cloudName}/image/upload/${image.public_id}.jpg`;
-          container.appendChild(img);
-        });
-      } catch (err) {
-        console.error("Error loading images:", err);
-        document.getElementById("gallery").innerText = "Images could not be loaded.";
-      }
-    }
-
-    loadGallery();  
-</script>
 
 <body>
 
