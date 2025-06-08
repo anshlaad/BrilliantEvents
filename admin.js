@@ -60,3 +60,16 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
 
   alert("Image uploaded and JSON updated successfully!");
 });
+
+const ADMIN_PASSWORD = "brilliantevents123"; // or whatever your password is
+
+function checkLogin() {
+  const enteredPassword = document.getElementById("admin-password").value;
+  if (enteredPassword === ADMIN_PASSWORD) {
+    document.getElementById("login-box").style.display = "none";
+    document.getElementById("upload-box").style.display = "block";
+  } else {
+    alert("Wrong password!");
+  }
+}
+
