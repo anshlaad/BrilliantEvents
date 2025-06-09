@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Upload</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    input, select, button {
+      margin: 1rem;
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Upload Image to Cloudinary (via Backend)</h1>
+
+  <form id="uploadForm">
+    <input type="file" id="imageInput" required /><br/>
+
+    <select id="folderSelect" required>
+      <option value="">-- Select Category --</option>
+      <option value="RingDecor">RingBirthday Decor</option>
+      <option value="weddingEntris">Wedding Entris</option>
+      <option value="ThemeBirthdayDecor">Theme Decor</option>
+      <option value="terraceDecor">Terrace Decor</option>
+    </select><br/>
+
+    <button type="submit">Upload</button>
+  </form>
+
+  <p id="statusMsg"></p>
+
+  <script src="admin.js"></script>
+</body>
+</html>
